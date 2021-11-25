@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ChoiceBox?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.projet.service.EmployeService">
+    <children>
+        <VBox layoutX="52.0" layoutY="23.0" prefHeight="286.0" prefWidth="76.0" spacing="20.0">
+            <children>
+                <Label prefHeight="20.0" prefWidth="93.0" text="id emp" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="8.0" />
+               </VBox.margin>
+                </Label>
+                <Label text="prenom">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+                </Label>
+                <Label text="nom">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+                </Label>
+                <Label text="titre">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+                </Label>
+                <Label text="affectation">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+                </Label>
+                <Label text="niveau">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+                </Label>
+                <Label depthTest="ENABLE" prefHeight="25.0" prefWidth="74.0" text="salaire">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="154.0" layoutY="27.0" prefHeight="235.0" prefWidth="109.0" spacing="10.0">
+            <children>
+                <TextField fx:id="idField" />
+                <TextField fx:id="prenomField" />
+                <TextField fx:id="nomField" />
+                <TextField fx:id="titreField" />
+<!--                <ChoiceBox value="choisir Direction" >-->
+<!--                    <items>-->
+<!--                        <FXCollections fx:factory="observableArrayList" >-->
+<!--                            <String fx:value="Direction du marketing"  />-->
+<!--                            <String fx:value="Direction commerciale"  />-->
+<!--                            <String fx:value="Direction financière "  />-->
+<!--                        </FXCollections>-->
+
+<!--                    </items>-->
+<!--                </ChoiceBox>-->
+
+                <TextField fx:id="affectationField" />
+                <TextField fx:id="niveauField" />
+                <TextField fx:id="salaireField" />
+
+
+            </children>
+        </VBox>
+        <HBox layoutX="26.0" layoutY="339.0" prefHeight="30.0" prefWidth="315.0" spacing="10.0">
+            <children>
+                <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButton" prefHeight="30.0" prefWidth="60.0" text="Insert" />
+                <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButton" prefHeight="30.0" prefWidth="90.0" text="Update">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin></Button>
+                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButton" prefHeight="30.0" prefWidth="90.0" text="Delete">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin></Button>
+            </children>
+        </HBox>
+        <TableView fx:id="TableView" editable="true" layoutX="354.0" layoutY="22.0" prefHeight="310.0" prefWidth="535.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="35.0" text="id" />
+                <TableColumn fx:id="prenomColumn" prefWidth="89.0" text="prenom" />
+                <TableColumn fx:id="nomColumn" prefWidth="63.0" text="nom" />
+                <TableColumn fx:id="titreColumn" prefWidth="93.0" text="titre" />
+                <TableColumn fx:id="affectationColumn" prefWidth="94.4000244140625" text="affectation" />
+                <TableColumn fx:id="niveauColumn" prefWidth="59.2000732421875" text="niveau" />
+                <TableColumn fx:id="salaireColumn" prefWidth="84.0" text="salaire" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
